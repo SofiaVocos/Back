@@ -10,8 +10,8 @@
       "price": "25",
       "thumbnail": "https://aldina.com.ar/wp-content/uploads/2020/08/bic-cristal-trazo-fino-azul-1.jpg",
       "id": 2
-   }
-]   {
+   },
+   {
       "title": "Lapicera",
       "price": "25",
       "thumbnail": "https://aldina.com.ar/wp-content/uploads/2020/08/bic-cristal-trazo-fino-azul-1.jpg",
@@ -22,5 +22,23 @@
       "price": "25",
       "thumbnail": "https://aldina.com.ar/wp-content/uploads/2020/08/bic-cristal-trazo-fino-azul-1.jpg",
       "id": 4
+   },
+   {
+      "title": "Lapicera",
+      "price": "25",
+      "thumbnail": "https://aldina.com.ar/wp-content/uploads/2020/08/bic-cristal-trazo-fino-azul-1.jpg",
+      "id": 5
+   },
+   {
+      "title": "Lapicera",
+      "price": "25",
+      "thumbnail": "https://aldina.com.ar/wp-content/uploads/2020/08/bic-cristal-trazo-fino-azul-1.jpg",
+      "id": 6
+   },
+   {
+      "title": "Lapicera",
+      "price": "25",
+      "thumbnail": "https://aldina.com.ar/wp-content/uploads/2020/08/bic-cristal-trazo-fino-azul-1.jpg",
+      "id": 7
    }
 ]

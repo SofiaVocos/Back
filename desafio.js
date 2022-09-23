@@ -3,7 +3,7 @@ class Contenedor {
   constructor(rutaArchivo) {
     this.rutaArchivo = `./${rutaArchivo}.txt`;
   }
-  //**************************************************************************/
+  //**************************/
   async getAll() {
     //LEE EL ARCHIVO Y devuelve un ARRAY con los objetos existentes dentro
     try {
@@ -20,7 +20,7 @@ class Contenedor {
       }
     }
   }
-  //**************************************************************************/
+  //**************************/
   async save(obj) {
     // Lee el archivo, agrega el OBJ al ARRAY y reescribe con ID
     try {
@@ -38,12 +38,12 @@ class Contenedor {
       console.log("error de escritura", err);
     }
   }
-  //**************************************************************************/
+  //**************************/
   async getById(id) {
     try {
       const array = await this.getAll();
 
-      const idEncontrado = array.find((element) => element.id == id);
+      const idEncontrado = array.find((element) => element.id === id);
 
       if (!idEncontrado) return null;
 
@@ -52,7 +52,7 @@ class Contenedor {
       console.log(error);
     }
   }
-  //**************************************************************************/
+  //**************************/
   async deleteById(id) {
     try {
       const array = await this.getAll();
@@ -71,7 +71,7 @@ class Contenedor {
       console.log(error);
     }
   }
-  //**************************************************************** */
+  //********************** */
   async deleteAll() {
     try {
       await fs.promises.writeFile(
@@ -82,7 +82,7 @@ class Contenedor {
       console.log(error);
     }
   }
-  //**************************************************************** */
+  //********************** */
 }
 //-----------------------------------------------------------------------------------------------------
 export { Contenedor };

@@ -1,0 +1,27 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js",
+    "dev-no-json": "nodemon ./index.js --ignore /*.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofiaVocos/Back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofiaVocos/Back/issues"
+  },
+  "homepage": "https://github.com/SofiaVocos/Back#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "ignore": ["/*.txt"],
+    "events": {
+      "start": "cls"
+    }
+}

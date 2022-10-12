@@ -91,16 +91,6 @@ routerApi.post("/", (req, res) => {
   res.status(200).send('Producto agregado');
 });
 
-
-// router.post('/', async (req, res) => {
-//     const element = req.body;
-//     const id = productos.length === 0 ? 1 : productos[productos.length - 1].id + 1;
-//     element.id = id;
-//     productos.push(element);
-
-//     res.status(200).send('Producto agregado');
-// })
-
 routerApi.put("/:id", (req, res) => {
     const id = req.params.id;
     getById(id)

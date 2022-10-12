@@ -13,3 +13,4 @@ const routerApi = require ('./routes/productos.js')
 app.use (express.json());
 app.use (express.urlencoded ({extended: true}));
 app.use ('/api/productos', routerApi);
+app.use('/formulario', express.static ('public'));

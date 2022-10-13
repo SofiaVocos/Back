@@ -2,16 +2,16 @@ const express = require ('express');
 const {Router} = express;
 const routerApi = Router ();
 const fs = require ('fs');
-const filePath = 'productos.json';
+const filePath = './productos.json';
 
 async function getAll() {
     try {
-      const contenido = await fs.readFile(filePath, "utf-8");
+      const contenido = await fs.promises.readFile(filePath, "utf-8");
       const elementos = JSON.parse(contenido);
       return elementos;
     } catch (error) {
       if (error.code === "ENOENT") {
-        await fs.writeFile(filePath, JSON.stringify([], null, 3));
+        await fs.promises.writeFile(filePath, JSON.stringify([], null, 3));
   
         return [];
       }
@@ -26,7 +26,7 @@ async function getAll() {
         elementos.length === 0 ? 1 : elementos[elementos.length - 1].id + 1;
       object.id = id;
       elementos.push(object);
-      await fs.writeFile(filePath, JSON.stringify(elementos, null, 2));
+      await fs.promises.writeFile(filePath, JSON.stringify(elementos, null, 2));
       return object.id;
     } catch (error) {
       throw new Error(`El archivo no pudo manipularse, error: ${error.message}`);
@@ -50,7 +50,7 @@ async function getAll() {
           let elemento = elementos.find((element) => element.id == number)
           if (!elemento) return 'Error: No pudo encontrarse el producto'
           const elementosFiltrados = elementos.filter((element) => element.id != number)
-          await fs.writeFile(filePath, JSON.stringify(elementosFiltrados,null,3))
+          await fs.promises.writeFile(filePath, JSON.stringify(elementosFiltrados,null,3))
           return elementosFiltrados
       }
       catch(error){
@@ -80,15 +80,14 @@ routerApi.get("/:id", (req, res) => {
 });
 
 routerApi.post("/", (req, res) => {
-    save(producto)
-    .then(productos.push(producto))
-    .then(res.status(200).send("Producto agregado"));
-
   const producto = req.body;
   const id = productos.length === 0 ? 1 : productos[productos.length - 1].id + 1;
   producto.id = id;
   productos.push(producto);
-  res.status(200).send('Producto agregado');
+
+  return save(producto)
+    .then(productos.push(producto))
+    .then(res.status(200).send("Producto agregado"));
 });
 
 routerApi.put("/:id", (req, res) => {

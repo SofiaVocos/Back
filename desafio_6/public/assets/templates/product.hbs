@@ -1,0 +1,36 @@
+<div>
+    <h2 id="products__title">Productos</h2>
+
+    <table class="product-list">
+        {{#if products.length}}
+        <tr>
+            <th>Título</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+        </tr>
+        {{#each products}}
+        <tr>
+            <td>{{this.titulo}}</td>
+            <td>{{this.precio}}</td>
+            <td><img height="72px" width="72px" src={{this.imagen}} /></td>
+        </tr>
+        {{/each}}
+        {{else}}
+        <p id="products_empty">No posee productos ingresados</p>
+        {{/if}}
+    </table>
+</div>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid;
+    }
+    .title {
+        text-align: center;
+    }
+    .product-list {
+        width: 100%;
+    }
+</style>

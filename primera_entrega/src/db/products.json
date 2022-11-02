@@ -1,0 +1,32 @@
+[
+   {
+      "title": "Lapicera",
+      "description": "Lapicera azul",
+      "code": "12345",
+      "thumbnail": "http://d2r9epyceweg5n.cloudfront.net/stores/001/174/859/products/2211-7cf61668f1259aed9315898905831692-640-0.jpg",
+      "price": 200,
+      "stock": 20,
+      "timestamp": "1/11/2022 23:37:18",
+      "id": 1
+   },
+   {
+      "title": "Lapicera bic",
+      "description": "Lapicera negra",
+      "code": "7412",
+      "thumbnail": "http://d2r9epyceweg5n.cloudfront.net/stores/001/174/859/products/2211-7cf61668f1259aed9315898905831692-640-0.jpg",
+      "price": 200,
+      "stock": 10,
+      "timestamp": "1/11/2022 23:38:11",
+      "id": 2
+   },
+   {
+      "title": "Lapicera bic roja",
+      "description": "Lapicera roja",
+      "code": "8523",
+      "thumbnail": "http://d2r9epyceweg5n.cloudfront.net/stores/001/174/859/products/2211-7cf61668f1259aed9315898905831692-640-0.jpg",
+      "price": 300,
+      "stock": 8,
+      "timestamp": "1/11/2022 23:39:45",
+      "id": 3
+   }
+]

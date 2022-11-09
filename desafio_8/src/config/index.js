@@ -34,7 +34,6 @@ const config = {
     sqlite: {
       client: "sqlite3",
       connection: {
-        // 🚧 crear las carpetas correspondientes de forma manual!
         filename: "./src/db/sqlite/ecommerce.sqlite",
       },
     },

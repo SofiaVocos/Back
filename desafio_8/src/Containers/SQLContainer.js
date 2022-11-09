@@ -1,5 +1,4 @@
 class SQLContainer {
-  // esta clase recibe el knex ya con sus options (esto está en el DAO/index.js, y el nombre de la tabla)
   constructor(knex, tableName) {
     this.knex = knex;
     this.table = tableName;
